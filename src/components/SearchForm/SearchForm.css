@@ -1,0 +1,134 @@
+.search-form {
+    max-width: 1140px;
+    padding: 70px 0;
+    margin: 0 auto;
+    border-bottom: 1px solid #424242;
+}
+
+.search-form__container {
+    position: relative;
+}
+
+.search-form__input {
+    width: 100%;
+    background-color: #2F2F2F;
+    border: 0;
+    padding: 0;
+    height: 72px;
+    border-radius: 9px;
+    padding-left: 63px;
+    box-sizing: border-box;
+    font-weight: 400;
+    color: #8B8B8B;
+    font-size: 18px;
+    line-height: 20px;
+}
+
+.search-form__button {
+    position: absolute;
+    top: 19px;
+    border-radius: 48px;
+    right: 257px;
+    border: 0;
+    padding: 0;
+    background-color: #4285F4;
+    color: #fff;
+    width: 60px;
+    height: 34px;
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 18px;
+}
+
+.search-form__toggle {
+    color: #fff;
+    position: absolute;
+    top: 26px;
+    right: 162px;
+    display: flex;
+}
+
+.search-form__chekbox {
+    height: 0;
+    width: 0;
+    visibility: hidden;
+}
+
+.search-form__label {
+    cursor: pointer;
+    text-indent: 50px;
+    width: 36px;
+    height: 20px;
+    background: grey;
+    display: block;
+    border-radius: 100px;
+    position: relative;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 18px;
+}
+
+.search-form__label::after {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 10px;
+    height: 10px;
+    background: #fff;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.search-form__chekbox:checked+label {
+    background: #3DDC84;
+}
+
+.search-form__chekbox:checked+label:after {
+    left: calc(100% - 5px);
+    transform: translateX(-100%);
+}
+
+.search_form__icon {
+    position: absolute;
+    top: 19px;
+    left: 19px;
+}
+
+@media screen and (max-width: 1280px) {
+    .search-form {
+        margin: 0 70px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .search-form {
+        padding: 80px 0 110px 0;
+        margin: 0 30px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .search-form {
+        margin: 0 10px;
+        padding-bottom: 45px;
+    }
+    
+    .search-form__toggle {
+        position: static;
+        margin-top: 45px;
+        margin-left: 25%;
+    }
+
+    .search-form__button {
+        right: 19px;
+    }
+
+    .search-form__label {
+        font-size: 11px;
+    }
+
+    .search-form__input {
+        font-size: 14px;
+    }
+}
